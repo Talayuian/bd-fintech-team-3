@@ -57,7 +57,7 @@ export class Overview {
     };
 
     private amountStats = {
-        year: 2016, 
+        year: 2016,
         min: 100
     };
 
@@ -73,6 +73,7 @@ export class Overview {
     private refreshChartData(){
         this.service.fetchAccounts().then(
             data => {
+              console.log(data);
                 this.dataReady(data);
             }
         )
